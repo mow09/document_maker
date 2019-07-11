@@ -5,6 +5,9 @@
 import os
 from pdflatex import PDFLaTeX
 
+def give_structure_TeX():
+    return '\n\\usepackage[english]{babel} \n\\usepackage{microtype} \n\\usepackage{amsmath,amsfonts,amsthm} \n\\usepackage[svgnames]{xcolor} \n\\usepackage[hang, small, labelfont=bf, up, textfont=it]{caption} \n\\usepackage{booktabs} \n\\usepackage{lastpage} \n\\usepackage{graphicx}\n\\usepackage{enumitem}\n\setlist{noitemsep} \n\\usepackage{sectsty} \n \\allsectionsfont{\\usefont{OT1}{phv}{b}{n}} \n\\usepackage{geometry} \n\geometry{top=1cm, bottom=1.5cm, left=2cm, right=2cm, includehead,includefoot,}\n\setlength{\columnsep}{7mm} \n\\usepackage[T1]{fontenc} \n\\usepackage[utf8]{inputenc} \n\\usepackage{XCharter} \n\\usepackage{fancyhdr} \n\pagestyle{fancy} \n\\renewcommand{\headrulewidth}{0.0pt} \n\\renewcommand{\\ootrulewidth}{0.4pt} \n\\renewcommand{\sectionmark}[1]{\markboth{#1}{}} \n\lhead{}\n\chead{\\textit{\\thetitle}} \n\\rhead{}\n\lfoot{}\n\cfoot{} \n\\ancypagestyle{firstpage}{ \\ancyhf{}\\renewcommand{\\ootrulewidth}{0pt} }\n\\newcommand{\\ruthorstyle}[1]{{\large\\usefont{OT1}{phv}{b}{n}\color{DarkBlue}#1}} \n\\newcommand{\institution}[1]{{\\ootnotesize\\usefont{OT1}{phv}{m}{sl}\color{Black}#1}} \n\\usepackage{titling}\n\\newcommand{\HorRule}{\color{black}\\rule{\linewidth}{1pt}} \n\pretitle{	\vspace{-30pt} 	\HorRule\vspace{10pt} \\ontsize{32}{36}\\usefont{OT1}{phv}{b}{n}\selectfont \color{DarkBlue}}\n\posttitle{\par\vskip 10pt} \n\preauthor{} \n\postauthor{ 	\vspace{10pt} 	\par\HorRule \vspace{0pt}}\n\\usepackage{lettrine} \n\\usepackage{fix-cm}	\n\\newcommand{\initial}[1]{ 	\lettrine[lines=3,findent=4pt,nindent=0pt]{		\color{DarkGoldenrod}		{#1}}{}}\n\\usepackage{xstring} \n\\newcommand{\lettrineabstract}[1]{	\StrLeft{#1}{1}[\\irstletter] 	\initial{\\irstletter}\\textbf{\StrGobbleLeft{#1}{llsectionsfont1}} }\n\\usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} \n\\rddbibresource{example.bib} \n\\usepackage[autostyle=true]{csquotes}'
+
 #####
 #
 #   CLASSES
@@ -138,7 +141,7 @@ class Document:
         #time.sleep(5)
         os.rename('somefile.pdf','output.pdf')
         #os.rmdir('some*')
-
+        os.system('rm some*')
 
         #return tex
 
