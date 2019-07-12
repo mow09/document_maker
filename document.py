@@ -5,8 +5,8 @@
 import os
 from pdflatex import PDFLaTeX
 
-def give_structure_TeX():
-    return '\n\\usepackage[english]{babel} \n\\usepackage{microtype} \n\\usepackage{amsmath,amsfonts,amsthm} \n\\usepackage[svgnames]{xcolor} \n\\usepackage[hang, small, labelfont=bf, up, textfont=it]{caption} \n\\usepackage{booktabs} \n\\usepackage{lastpage} \n\\usepackage{graphicx}\n\\usepackage{enumitem}\n\setlist{noitemsep} \n\\usepackage{sectsty} \n \\allsectionsfont{\\usefont{OT1}{phv}{b}{n}} \n\\usepackage{geometry} \n\geometry{top=1cm, bottom=1.5cm, left=2cm, right=2cm, includehead,includefoot,}\n\setlength{\columnsep}{7mm} \n\\usepackage[T1]{fontenc} \n\\usepackage[utf8]{inputenc} \n\\usepackage{XCharter} \n\\usepackage{fancyhdr} \n\pagestyle{fancy} \n\\renewcommand{\headrulewidth}{0.0pt} \n\\renewcommand{\\ootrulewidth}{0.4pt} \n\\renewcommand{\sectionmark}[1]{\markboth{#1}{}} \n\lhead{}\n\chead{\\textit{\\thetitle}} \n\\rhead{}\n\lfoot{}\n\cfoot{} \n\\ancypagestyle{firstpage}{ \\ancyhf{}\\renewcommand{\\ootrulewidth}{0pt} }\n\\newcommand{\\ruthorstyle}[1]{{\large\\usefont{OT1}{phv}{b}{n}\color{DarkBlue}#1}} \n\\newcommand{\institution}[1]{{\\ootnotesize\\usefont{OT1}{phv}{m}{sl}\color{Black}#1}} \n\\usepackage{titling}\n\\newcommand{\HorRule}{\color{black}\\rule{\linewidth}{1pt}} \n\pretitle{	\vspace{-30pt} 	\HorRule\vspace{10pt} \\ontsize{32}{36}\\usefont{OT1}{phv}{b}{n}\selectfont \color{DarkBlue}}\n\posttitle{\par\vskip 10pt} \n\preauthor{} \n\postauthor{ 	\vspace{10pt} 	\par\HorRule \vspace{0pt}}\n\\usepackage{lettrine} \n\\usepackage{fix-cm}	\n\\newcommand{\initial}[1]{ 	\lettrine[lines=3,findent=4pt,nindent=0pt]{		\color{DarkGoldenrod}		{#1}}{}}\n\\usepackage{xstring} \n\\newcommand{\lettrineabstract}[1]{	\StrLeft{#1}{1}[\\irstletter] 	\initial{\\irstletter}\\textbf{\StrGobbleLeft{#1}{llsectionsfont1}} }\n\\usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} \n\\rddbibresource{example.bib} \n\\usepackage[autostyle=true]{csquotes}'
+def struct():
+    return '\n\\usepackage[english]{babel} \n\\usepackage{microtype} \n\\usepackage{amsmath,amsfonts,amsthm} \n\\usepackage[svgnames]{xcolor} \n\\usepackage[hang, small, labelfont=bf, up, textfont=it]{caption} \n\\usepackage{booktabs} \n\\usepackage{lastpage} \n\\usepackage{graphicx}\n\\usepackage{enumitem}\n\setlist{noitemsep} \n\\usepackage{sectsty} \n \\allsectionsfont{\\usefont{OT1}{phv}{b}{n}} \n\\usepackage{geometry} \n\geometry{top=1cm, bottom=1.5cm, left=2cm, right=2cm, includehead,includefoot,}\n\setlength{\columnsep}{7mm} \n\\usepackage[T1]{fontenc} \n\\usepackage[utf8]{inputenc} \n\\usepackage{XCharter} \n\\usepackage{fancyhdr} \n\pagestyle{fancy} \n\\renewcommand{\headrulewidth}{0.0pt} \n\\renewcommand{\\footrulewidth}{0.4pt} \n \\renewcommand{\sectionmark}[1]{\markboth{#1}{}} \n \lhead{}\n\chead{\\textit{\\thetitle}} \n\\rhead{}\n\lfoot{}\n\cfoot{} \n\\fancypagestyle{firstpage}{\\fancyhf{} \\renewcommand{\\footrulewidth}{0pt}}\n\\newcommand{\\authorstyle}[1]{{\large\\usefont{OT1}{phv}{b}{n}\color{DarkBlue}#1}} \n\\newcommand{\institution}[1]{{\\footnotesize\\usefont{OT1}{phv}{m}{sl}\color{Black}#1}} \n\\usepackage{titling}\n\\newcommand{\HorRule}{\color{black}\\rule{\linewidth}{1pt}} \n\pretitle{	\\vspace{-30pt} 	\HorRule\\vspace{10pt} \\fontsize{32}{36}\\usefont{OT1}{phv}{b}{n}\selectfont \color{DarkBlue}}\n\posttitle{\par\\vskip 10pt} \n\preauthor{} \n\postauthor{ 	\\vspace{10pt} 	\par\HorRule \\vspace{0pt}}\n\\usepackage{lettrine} \n\\usepackage{fix-cm}	\n\\newcommand{\initial}[1]{ 	\lettrine[lines=3,findent=4pt,nindent=0pt]{		\color{DarkGoldenrod}		{#1}}{}}\n\\usepackage{xstring} \n\\newcommand{\lettrineabstract}[1]{	\StrLeft{#1}{1}[\\irstletter] 	\initial{\\irstletter}\\textbf{\StrGobbleLeft{#1}{llsectionsfont1}} }\n\\usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} \n\\addbibresource{example.bib} \n\\usepackage[autostyle=true]{csquotes}'
 
 #####
 #
@@ -87,7 +87,41 @@ class Paragraph:
     def get_tex(self):
         return '\n%s' % (self.text)
 
+class Matrix:
+    def __init__(self,M,m_n):
+        self.M = M
+        self.m_n = m_n
 
+    def build_matrix(self):
+        m_mid = ''
+        for m in range(len(self.m_n)):
+            #print(m)
+            #%s & %s & %s\n %s & %s & %s \n
+            for n in range(len(self.m_n[m])):
+                #print('n',n)
+                #print(m_n[m][n])
+                m_mid = m_mid + str(self.m_n[m][n])
+                if (n < len(self.m_n[m])-1):
+                    m_mid = m_mid + ' & '
+                else:
+                    if m == len(m_n)-1:
+                        continue
+                    else:
+                        m_mid = m_mid + '\\\[0.3em]'
+            m_mid = m_mid + ' \n '
+        return m_mid
+
+    def get_tex(self):
+        m_begin = '\\begin{bmatrix}\n'
+        m_end = '\end{bmatrix}'
+        return '\n$ %s = %s %s %s $' % (self.M, m_begin, self.build_matrix(), m_end)
+
+#
+#####
+#####
+#
+#   MAIN Document
+#
 class Document:
     def __init__(self):
         self.blocks = []
@@ -95,6 +129,7 @@ class Document:
     def add_title(self, text):
         t = Title(text)
         self.blocks.append(t)
+
 
     #def add_subtitle(self, text):
     #    t = SubTitle(text)
@@ -126,7 +161,14 @@ class Document:
 
     def add_paragraph(self, para):
         p = Paragraph(para)
+
         self.blocks.append(p)
+
+    def add_matrix(self, M, m_n):
+        #print('here')
+        m = Matrix(M, m_n)
+        #print('here')
+        self.blocks.append(m)
 
     def write_tex(self):
         tex = ''
@@ -135,13 +177,16 @@ class Document:
         tex = tex + '\end{document}'
         with open('somefile.tex', 'w') as tex_main:
             tex_main.write(tex)
+        with open('structure.tex', 'w') as tex_struct:
+            tex_struct.write(struct())
         #time.sleep(5)
         pdfl = PDFLaTeX.from_texfile('somefile.tex')
-        pdf, log, completed_process = pdfl.create_pdf(keep_pdf_file=True, keep_log_file=False)
+        pdf, log, completed_process = pdfl.create_pdf(keep_pdf_file=True, keep_log_file=True)
         #time.sleep(5)
         os.rename('somefile.pdf','output.pdf')
         #os.rmdir('some*')
-        os.system('rm some*')
+        #os.system('rm some*')
+        os.system('rm structure.tex')
 
         #return tex
 
@@ -199,6 +244,9 @@ if __name__ == "__main__":
      '\n\lipsum[20-21]\n',
      '\n\lipsum[22-23]\n']
 
+    m_n = [[1,2,3,2],[4,5,6,2],[7,8,9,2]]
+    M = 'P'
+
 #####
 #
 #   MAIN
@@ -240,9 +288,13 @@ if __name__ == "__main__":
 
     paper.add_paragraph(PAR[7])
 
-    paper.add_image(IMAGE_PATH,IMAGE_TITLE)
+    #paper.add_image(IMAGE_PATH,IMAGE_TITLE)
 
     paper.add_paragraph(PAR[8])
+
+    paper.add_matrix(M, m_n)
+
+    paper.add_paragraph(PAR[9])
 
     paper.write_tex()
 
