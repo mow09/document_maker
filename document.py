@@ -104,7 +104,7 @@ class Matrix:
                 if (n < len(self.m_n[m])-1):
                     m_mid = m_mid + ' & '
                 else:
-                    if m == len(m_n)-1:
+                    if m == len(self.m_n)-1:
                         continue
                     else:
                         m_mid = m_mid + '\\\[0.3em]'
@@ -114,7 +114,25 @@ class Matrix:
     def get_tex(self):
         m_begin = '\\begin{bmatrix}\n'
         m_end = '\end{bmatrix}'
-        return '\n$ %s = %s %s %s $' % (self.M, m_begin, self.build_matrix(), m_end)
+        return '\n$ %s = %s %s %s $ ' % (self.M, m_begin, self.build_matrix(), m_end)
+
+class Vector:
+    def __init__(self, v, ve_list):
+        self.ve_list = ve_list
+        self.v = v
+
+    def build_vector(self):
+        v_mid = ''
+        for m in range(len(self.ve_list)):
+            if m != len(self.ve_list)-1:
+                v_mid = v_mid + str(self.ve_list[m]) + '\\\ \n'
+            else:
+                v_mid = v_mid + str(self.ve_list[m]) + ' \n '
+        return v_mid
+    def get_tex(self,):
+        v_beg = '\n\\left(\n \\begin{array}{c}\n'
+        v_end = '\end{array}\n \\right)\n'
+        return '\n$ \\vec{%s} = %s %s %s $ ' % (self.v, v_beg, self.build_vector(), v_end)
 
 #
 #####
@@ -169,6 +187,10 @@ class Document:
         m = Matrix(M, m_n)
         #print('here')
         self.blocks.append(m)
+
+    def add_vector(self, vector, m_list):
+        v = Vector(vector, m_list)
+        self.blocks.append(v)
 
     def write_tex(self):
         tex = ''

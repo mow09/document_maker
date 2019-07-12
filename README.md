@@ -2,6 +2,8 @@
 
 - [ ] add subtitle
 - [ ] math
+	- [x] MAtrix
+	- [x] Vector
 	- [ ] Graphs
 	- [ ] Questions, Exercises
 	- [ ] create real exercies
