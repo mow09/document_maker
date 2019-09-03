@@ -1,7 +1,5 @@
 [![Build Status](https://travis-ci.com/mow09/document_maker.svg?token=3YzpCr7zqrJRwks2k22w&branch=master)](https://travis-ci.com/mow09/document_maker)
 
-# TeX installed on you machine and PATH exported?
-
 # Making Document
 
 Is there to speed up good documented work.
@@ -35,6 +33,9 @@ But still there are a few things...
 
 # Try it:
 ## just works with TEX set up
+I recommend [TeXstudio](https://www.texstudio.org) and [LaTeX](https://www.latex-project.org/get/)
+
+---
 
 1. clone it (`git clone https://github.com/mow09/document_maker.git`)
 2. make env (`virtualenv doc_maker`) in my_path
