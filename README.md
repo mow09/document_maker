@@ -30,12 +30,11 @@ But still there are a few things...
 	- [ ] analyzable
 - [ ] add Lorem ipsum :smile: :+1:
 - [ ] overwork struct .tex for the rest
-
-# Try it:
+---
 ## just works with TEX set up
 I recommend [TeXstudio](https://www.texstudio.org) and [LaTeX](https://www.latex-project.org/get/)
-
 ---
+# Try it:
 
 1. clone it (`git clone https://github.com/mow09/document_maker.git`)
 2. make env (`virtualenv doc_maker`) in my_path
