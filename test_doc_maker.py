@@ -1,7 +1,7 @@
 """Test if the doc maker makes an pdf."""
 
 import os
-from document import Document
+import document
 
 
 def test_doc_maker():
@@ -54,7 +54,7 @@ def test_doc_maker():
     #   MAIN
     #
 
-    paper = Document()
+    paper = document.Document()
 
     paper.add_title(TITLE)
 
