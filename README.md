@@ -32,6 +32,7 @@ But still there are a few things...
 - [ ] overwork struct .tex for the rest
 ---
 ## just works with TEX set up
+
 I recommend [TeXstudio](https://www.texstudio.org) and [LaTeX](https://www.latex-project.org/get/)
 ---
 # Try it:
