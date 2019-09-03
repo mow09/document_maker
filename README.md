@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/mow09/document_maker.svg?token=3YzpCr7zqrJRwks2k22w&branch=master)](https://travis-ci.com/mow09/document_maker)
+
 # Making Document
 
 Is there to speed up good documented work.
