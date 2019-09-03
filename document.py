@@ -11,7 +11,7 @@ from pdflatex import PDFLaTeX
 def struct():
     """Adds needed information for LaTeX."""
 
-    return """\n\\usepackage[english]{babel} \n\\usepackage{microtype} \n\\usepackage{amsmath,amsfonts,amsthm} \n\\usepackage[svgnames]{xcolor} \n\\usepackage[hang, small, labelfont=bf, up, textfont=it]{caption} \n\\usepackage{booktabs} \n\\usepackage{lastpage} \n\\usepackage{graphicx}\n\\usepackage{enumitem}\n\setlist{noitemsep} \n\\usepackage{sectsty} \n \\allsectionsfont{\\usefont{OT1}{phv}{b}{n}} \n\\usepackage{geometry} \n\geometry{top=1cm, bottom=1.5cm, left=2cm, right=2cm, includehead,includefoot,}\n\setlength{\columnsep}{7mm} \n\\usepackage[T1]{fontenc} \n\\usepackage[utf8]{inputenc} \n\\usepackage{XCharter} \n\\usepackage{fancyhdr} \n\pagestyle{fancy} \n\\renewcommand{\headrulewidth}{0.0pt} \n\\renewcommand{\\footrulewidth}{0.4pt} \n \\renewcommand{\sectionmark}[1]{\markboth{#1}{}} \n \lhead{}\n\chead{\\textit{\\thetitle}} \n\\rhead{}\n\lfoot{}\n\cfoot{} \n\\fancypagestyle{firstpage}{\\fancyhf{} \\renewcommand{\\footrulewidth}{0pt}}\n\\newcommand{\\authorstyle}[1]{{\large\\usefont{OT1}{phv}{b}{n}\color{DarkBlue}#1}} \n\\newcommand{\institution}[1]{{\\footnotesize\\usefont{OT1}{phv}{m}{sl}\color{Black}#1}} \n\\usepackage{titling}\n\\newcommand{\HorRule}{\color{black}\\rule{\linewidth}{1pt}} \n\pretitle{	\\vspace{-30pt} 	\HorRule\\vspace{10pt} \\fontsize{32}{36}\\usefont{OT1}{phv}{b}{n}\selectfont \color{DarkBlue}}\n\posttitle{\par\\vskip 10pt} \n\preauthor{} \n\postauthor{ 	\\vspace{10pt} 	\par\HorRule \\vspace{0pt}}\n\\usepackage{lettrine} \n\\usepackage{fix-cm}	\n\\newcommand{\initial}[1]{ 	\lettrine[lines=3,findent=4pt,nindent=0pt]{		\color{DarkGoldenrod}		{#1}}{}}\n\\usepackage{xstring} \n\\newcommand{\lettrineabstract}[1]{	\StrLeft{#1}{1}[\\irstletter] 	\initial{\\irstletter}\\textbf{\StrGobbleLeft{#1}{llsectionsfont1}} }\n\\usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} \n\\addbibresource{example.bib} \n\\usepackage[autostyle=true]{csquotes}"""
+    return '\n\\usepackage[english]{babel} \n\\usepackage{microtype} \n\\usepackage{amsmath,amsfonts,amsthm} \n\\usepackage[svgnames]{xcolor} \n\\usepackage[hang, small, labelfont=bf, up, textfont=it]{caption} \n\\usepackage{booktabs} \n\\usepackage{lastpage} \n\\usepackage{graphicx}\n\\usepackage{enumitem}\n\\setlist{noitemsep} \n\\usepackage{sectsty} \n \\allsectionsfont{\\usefont{OT1}{phv}{b}{n}} \n\\usepackage{geometry} \n\\geometry{top=1cm, bottom=1.5cm, left=2cm, right=2cm, includehead,includefoot,}\n\\setlength{\\columnsep}{7mm} \n\\usepackage[T1]{fontenc} \n\\usepackage[utf8]{inputenc} \n\\usepackage{XCharter} \n\\usepackage{fancyhdr} \n\pagestyle{fancy} \n\\renewcommand{\headrulewidth}{0.0pt} \n\\renewcommand{\\footrulewidth}{0.4pt} \n \\renewcommand{\\sectionmark}[1]{\markboth{#1}{}} \n \lhead{}\n\\chead{\\textit{\\thetitle}} \n\\rhead{}\n\lfoot{}\n\\cfoot{} \n\\fancypagestyle{firstpage}{\\fancyhf{} \\renewcommand{\\footrulewidth}{0pt}}\n\\newcommand{\\authorstyle}[1]{{\large\\usefont{OT1}{phv}{b}{n}\\color{DarkBlue}#1}} \n\\newcommand{\institution}[1]{{\\footnotesize\\usefont{OT1}{phv}{m}{sl}\\color{Black}#1}} \n\\usepackage{titling}\n\\newcommand{\HorRule}{\\color{black}\\rule{\linewidth}{1pt}} \n\pretitle{	\\vspace{-30pt} 	\HorRule\\vspace{10pt} \\fontsize{32}{36}\\usefont{OT1}{phv}{b}{n}\\selectfont \\color{DarkBlue}}\n\posttitle{\par\\vskip 10pt} \n\preauthor{} \n\postauthor{ 	\\vspace{10pt} 	\par\HorRule \\vspace{0pt}}\n\\usepackage{lettrine} \n\\usepackage{fix-cm}	\n\\newcommand{\initial}[1]{ 	\lettrine[lines=3,findent=4pt,nindent=0pt]{		\\color{DarkGoldenrod}		{#1}}{}}\n\\usepackage{xstring} \n\\newcommand{\lettrineabstract}[1]{	\StrLeft{#1}{1}[\\irstletter] 	\initial{\\irstletter}\\textbf{\StrGobbleLeft{#1}{llsectionsfont1}} }\n\\usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} \n\\addbibresource{example.bib} \n\\usepackage[autostyle=true]{csquotes}'
 
 #####
 #
@@ -55,7 +55,7 @@ class Section:
         self.text = text
 
     def get_tex(self):
-        return '\n\section{%s} ' % (self.text)
+        return '\n\\section{%s} ' % (self.text)
 
 
 class SubSection:
@@ -63,7 +63,7 @@ class SubSection:
         self.text = text
 
     def get_tex(self):
-        return '\n\subsection{%s} ' % (self.text)
+        return '\n\\subsection{%s} ' % (self.text)
 
 
 class SubSubSection:
@@ -71,7 +71,7 @@ class SubSubSection:
         self.text = text
 
     def get_tex(self):
-        return '\n\subsubsection{%s} ' % (self.text)
+        return '\n\\subsubsection{%s} ' % (self.text)
 
 
 class Table:
@@ -95,7 +95,7 @@ class Image:
         self.title = title
 
     def get_tex(self):
-        return '\n\\begin{figure}\includegraphics[width=\linewidth]{%s} \caption{%s} \end{figure}\n' % (self.path, self.title)
+        return '\n\\begin{figure}\includegraphics[width=\linewidth]{%s} \\caption{%s} \end{figure}\n' % (self.path, self.title)
 
 
 class Paragraph:
@@ -132,8 +132,8 @@ class Matrix:
 
     def get_tex(self):
         m_begin = '\\begin{bmatrix}\n'
-        m_end = '\end{bmatrix}'
-        return '\n$ %s = %s %s %s $ ' % (self.M, m_begin, self.build_matrix(), m_end)
+        m_end = '\end{bmatrix}\\newline\\newline'
+        return '\\newline\\newline\n$ %s = %s %s %s $ ' % (self.M, m_begin, self.build_matrix(), m_end)
 
 
 class Vector:
@@ -229,7 +229,7 @@ class Document:
         # time.sleep(5)
         os.rename('somefile.pdf', 'output.pdf')
         # os.rmdir('some*')
-        # os.system('rm some*')
+        os.system('rm some*')
         os.system('rm structure.tex')
 
         # return tex
