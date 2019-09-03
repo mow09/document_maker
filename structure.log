@@ -6,12 +6,13 @@ entering extended mode
 (./structure.tex
 LaTeX2e <2018-12-01>
 
+
 ! LaTeX Error: \usepackage before \documentclass.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
- ...                                              
-                                                  
+ ...
+
 l.22 \usepackage[english]{
                           babel} % English language hyphenation
 \usepackage may only appear in the document preamble, i.e.,
@@ -22,8 +23,8 @@ between \documentclass and \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
- ...                                              
-                                                  
+ ...
+
 l.24 \usepackage{
                  microtype} % Better typography
 \usepackage may only appear in the document preamble, i.e.,
@@ -34,8 +35,8 @@ between \documentclass and \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
- ...                                              
-                                                  
+ ...
+
 l.26 \usepackage{
                  amsmath,amsfonts,amsthm} % Math packages for equations
 \usepackage may only appear in the document preamble, i.e.,
@@ -46,8 +47,8 @@ between \documentclass and \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
- ...                                              
-                                                  
+ ...
+
 l.28 \usepackage[svgnames]{
                            xcolor} % Enabling colors by their 'svgnames'
 \usepackage may only appear in the document preamble, i.e.,
@@ -58,8 +59,8 @@ between \documentclass and \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
- ...                                              
-                                                  
+ ...
+
 l.30 ...ng, small, labelfont=bf, up, textfont=it]{
                                                   caption} % Custom captions...
 
@@ -71,8 +72,8 @@ between \documentclass and \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
- ...                                              
-                                                  
+ ...
+
 l.32 \usepackage{
                  booktabs} % Horizontal rules in tables
 \usepackage may only appear in the document preamble, i.e.,
@@ -83,8 +84,8 @@ between \documentclass and \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
- ...                                              
-                                                  
+ ...
+
 l.34 \usepackage{
                  lastpage} % Used to determine the number of pages in the do...
 
@@ -96,8 +97,8 @@ between \documentclass and \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
- ...                                              
-                                                  
+ ...
+
 l.36 \usepackage{
                  graphicx} % Required for adding images
 \usepackage may only appear in the document preamble, i.e.,
@@ -108,8 +109,8 @@ between \documentclass and \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
- ...                                              
-                                                  
+ ...
+
 l.38 \usepackage{
                  enumitem} % Required for customising lists
 \usepackage may only appear in the document preamble, i.e.,
@@ -129,8 +130,8 @@ and I'll forget about whatever was undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
- ...                                              
-                                                  
+ ...
+
 l.39 \setlist{n
                oitemsep} % Remove spacing between bullet/numbered list elements
 
@@ -148,7 +149,7 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no p in font nullfont!
 
 Overfull \hbox (20.0pt too wide) in paragraph at lines 39--40
-[] 
+[]
  []
 
 
@@ -156,8 +157,8 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 39--40
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
- ...                                              
-                                                  
+ ...
+
 l.41 \usepackage{
                  sectsty} % Enables custom section titles
 \usepackage may only appear in the document preamble, i.e.,
@@ -181,8 +182,8 @@ File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
- ...                                              
-                                                  
+ ...
+
 l.48 \usepackage{
                  geometry} % Required for adjusting page dimensions
 \usepackage may only appear in the document preamble, i.e.,
@@ -202,8 +203,8 @@ and I'll forget about whatever was undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
- ...                                              
-                                                  
+ ...
+
 l.51 	t
        op=0cm, % Top margin
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -281,8 +282,8 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 51--59
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
- ...                                              
-                                                  
+ ...
+
 l.66 \usepackage[T1]{
                      fontenc} % Output font encoding for international chara...
 
@@ -294,8 +295,8 @@ between \documentclass and \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
- ...                                              
-                                                  
+ ...
+
 l.67 \usepackage[utf8]{
                        inputenc} % Required for inputting international char...
 
@@ -307,8 +308,8 @@ between \documentclass and \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
- ...                                              
-                                                  
+ ...
+
 l.69 \usepackage{
                  XCharter} % Use the XCharter font
 \usepackage may only appear in the document preamble, i.e.,
@@ -319,16 +320,16 @@ between \documentclass and \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
- ...                                              
-                                                  
+ ...
+
 l.75 \usepackage{
                  fancyhdr} % Needed to define custom headers/footers
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
 ! Undefined control sequence.
-<argument> \undefinedpagestyle 
-                               
+<argument> \undefinedpagestyle
+
 l.76 \pagestyle{fancy}
                        % Enables the custom headers/footers
 The control sequence at the end of the top line
@@ -342,8 +343,8 @@ and I'll forget about whatever was undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
- ...                                              
-                                                  
+ ...
+
 l.78 \renewcommand{\headrulewidth}
                                   {0.0pt} % No header rule
 Try typing  <return>  to proceed.
@@ -354,8 +355,8 @@ If that doesn't work, type  X <return>  to quit.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
- ...                                              
-                                                  
+ ...
+
 l.79 \renewcommand{\footrulewidth}
                                   {0.4pt} % Thin footer rule
 Try typing  <return>  to proceed.
@@ -384,8 +385,8 @@ and I'll forget about whatever was undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
- ...                                              
-                                                  
+ ...
+
 l.87 \chead{\textit{\thetitle}
                               } % Center header - currently printing the art...
 
@@ -393,8 +394,8 @@ You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 ! Undefined control sequence.
-<recently read> \thetitle 
-                          
+<recently read> \thetitle
+
 l.87 \chead{\textit{\thetitle}
                               } % Center header - currently printing the art...
 The control sequence at the end of the top line
@@ -449,8 +450,8 @@ and I'll forget about whatever was undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
- ...                                              
-                                                  
+ ...
+
 l.95 \fancypagestyle{f
                       irstpage}{ % Page style for the first page with the title
 
@@ -485,8 +486,8 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 95--99
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
- ...                                              
-                                                  
+ ...
+
 l.108 \usepackage{
                   titling} % Allows custom title configuration
 \usepackage may only appear in the document preamble, i.e.,
@@ -502,7 +503,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-\HorRule ->\color 
+\HorRule ->\color
                   {black}\rule {\linewidth }{1pt}
 l.114 	\HorRule
                \vspace{10pt} % Horizontal rule before the title
@@ -517,8 +518,8 @@ and I'll forget about whatever was undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
- ...                                              
-                                                  
+ ...
+
 l.114 	\HorRule
                \vspace{10pt} % Horizontal rule before the title
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -581,7 +582,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-\HorRule ->\color 
+\HorRule ->\color
                   {black}\rule {\linewidth }{1pt}
 l.125 	\par\HorRule
                     % Horizontal rule after the title
@@ -596,8 +597,8 @@ and I'll forget about whatever was undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
- ...                                              
-                                                  
+ ...
+
 l.125 	\par\HorRule
                     % Horizontal rule after the title
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -618,8 +619,8 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 125--128
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
- ...                                              
-                                                  
+ ...
+
 l.133 \usepackage{
                   lettrine} % Package to accentuate the first letter of the ...
 
@@ -631,8 +632,8 @@ between \documentclass and \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
- ...                                              
-                                                  
+ ...
+
 l.134 \usepackage{
                   fix-cm}	% Fixes the height of the lettrine
 \usepackage may only appear in the document preamble, i.e.,
@@ -643,8 +644,8 @@ between \documentclass and \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
- ...                                              
-                                                  
+ ...
+
 l.143 \usepackage{
                   xstring} % Required for string manipulation
 \usepackage may only appear in the document preamble, i.e.,
@@ -655,8 +656,8 @@ between \documentclass and \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
- ...                                              
-                                                  
+ ...
+
 l.154 ...end=bibtex,style=authoryear,natbib=true]{
                                                   biblatex} % Use the bibtex...
 
@@ -677,8 +678,8 @@ and I'll forget about whatever was undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
- ...                                              
-                                                  
+ ...
+
 l.156 \addbibresource{e
                        xample.bib} % The filename of the bibliography
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -697,7 +698,7 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no b in font nullfont!
 
 Overfull \hbox (20.0pt too wide) in paragraph at lines 156--157
-[] 
+[]
  []
 
 
@@ -705,8 +706,8 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 156--157
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
- ...                                              
-                                                  
+ ...
+
 l.158 \usepackage[autostyle=true]{
                                   csquotes} % Required to generate language-...
 
@@ -716,10 +717,10 @@ between \documentclass and \begin{document}.
 )
 ! Emergency stop.
 <*> structure.tex
-                 
+
 *** (job aborted, no legal \end found)
 
- 
+
 Here is how much of TeX's memory you used:
  76 strings out of 492616
  1081 string characters out of 6129481

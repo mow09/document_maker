@@ -12,7 +12,6 @@ It is not perfect jet but in can make:
 	2. numeric
 - and naturally of course a title
 
-
 ## creating a pdf with LaTeX
 To create a pdf it uses LaTeX which makes it all flexible.
 But still there are a few things...
