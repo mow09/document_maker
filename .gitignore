@@ -4,3 +4,5 @@ output.pdf
 bear.jpg
 some*
 structure.tex
+__pycache__/
+__pycache__/*
