@@ -1,2 +1,3 @@
 tex
+latexmk
 pdflatex==0.1.3
