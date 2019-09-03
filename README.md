@@ -26,7 +26,7 @@ But still there are a few things...
 - [ ] a QR for a reimplement
 	- [ ] contains random seed for correction
 	- [ ] analyzable
-
+- [ ] add Lorem ipsum :smile: :+1:
 - [ ] overwork struct .tex for the rest
 
 # Try it:
