@@ -39,16 +39,28 @@ class Title:
 
 
 # class SubTitle:
-#    def __init__(self, text):
-#        self.text = text
-#    def get_tex(self):
-#        return '\\author{\\authorstyle{%s}}\n ' % (self.text)
+#     def __init__(self, text):
+#         self.text = text
+#
+#     def get_tex(self):
+#         return '\\author{\\authorstyle{%s}}\n ' % (self.text)
+
 
 # class SubSubTitle:
-#    def __init__(self, text):
-#        self.text = text
-#    def get_tex(self):
-#        return ' %s ' % (self.text)
+#     def __init__(self, text):
+#         self.text = text
+#
+#     def get_tex(self):
+#         return ' %s ' % (self.text)
+
+
+class Description:
+    def __init__(self, text):
+        self.text = text
+
+    def get_tex(self):
+        return ' \\textit{%s} ' % (self.text)
+
 
 class Section:
     def __init__(self, text):
@@ -171,13 +183,17 @@ class Document:
         t = Title(text)
         self.blocks.append(t)
 
-    # def add_subtitle(self, text):
-    #    t = SubTitle(text)
-    #    self.blocks.append(t)
+    def add_description(self, text):
+        t = Description(text)
+        self.blocks.append(t)
 
-    # def add_subsubtitle(self, text):
-    #    t = SubSubTitle(text)
-    #    self.blocks.append(t)
+    def add_subtitle(self, text):
+        t = SubTitle(text)
+        self.blocks.append(t)
+
+    def add_subsubtitle(self, text):
+        t = SubSubTitle(text)
+        self.blocks.append(t)
 
     def add_section(self, text):
         t = Section(text)
@@ -247,8 +263,8 @@ if __name__ == "__main__":
 
     TITLE = 'This is a TITLE'
 
-    # SUBTITLE = 'A way to describe changes on markets and there customers'
-    # SUBSUBTITLE = 'How does it work and how does it look like'
+    SUBTITLE = 'A way to describe changes on markets and there customers'
+    SUBSUBTITLE = 'How does it work and how does it look like'
 
     SECTION = 'This is the first SECTION'
     SECTION2 = 'This is the second SECTION'
@@ -314,7 +330,9 @@ if __name__ == "__main__":
 
     # paper.add_subtitle(SUBTITLE)
 
-    # paper.add_subsubtitle(SUBSUBTITLE)
+    # paper.add_subsubtitle(PAR[2])
+
+    paper.add_description(PAR[2])
 
     paper.add_section(SECTION)
 
