@@ -37,9 +37,10 @@ I recommend [TeXstudio](https://www.texstudio.org) and [LaTeX](https://www.latex
 
 ---
 # Try it:
-
+## Requires Python
 1. clone it (`git clone https://github.com/mow09/document_maker.git`)
-2. make env (`virtualenv doc_maker`) in my_path
-	- (!) `source my_path/doc_maker/bin/activate`
-3. install requirements `pip install -r requirements` in env
-4. run `python document.py` to see an example
+2. `cd document_maker`
+2. install requirements `pip install -r requirements` in env
+3. run `python document.py` to see an example
+
+Hint: make sure that you run it in the right directory :+1:
